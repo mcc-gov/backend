@@ -10,7 +10,7 @@ def run(settings, fy):
 	cur = conn.cursor()
 	#print "DB Connected"
 
-	f=open("query.sql")
+	f=open("config/"+fy+"/timeseries.sql")
 
 	sql = f.read()
 	f.close()
