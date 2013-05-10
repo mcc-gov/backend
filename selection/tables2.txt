@@ -1,3 +1,0 @@
-t_ChildMortality1 ChildMortality
-t_AccessSanitation1 AccessSanitation
-t_AccessWater1 AccessWater

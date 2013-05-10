@@ -1,12 +1,3 @@
-USE [DPESel_Prod13]
-GO
-
-/****** Object:  View [dbo].[v_dc_lmic_indicators]    Script Date: 04/23/2013 15:45:03 ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
 
 create view [dbo].[v_dc_lmic_indicators]
 as
@@ -14,7 +5,14 @@ select l.CountryCode,
 	pr.PolRigDisplay, cl.CivLibDisplay, cc.ConCorDisplay, ge.GovtEffDisplay, rl.RuleLawDisplay, fi.FreedomInfoDisplay,
 	i.ImmunDisplay,h.HealthDisplay,ee.EducExpDisplay,gs.GirlsSecAgg,ch.CHDisplay,nrm.NRMDisplay,
 	rq.RegQualityDisplay,lra.LRADisplay, bsu.BusStartupDisplay ,tp.TradeDisplay,infl.InflDisplay,fp.FisPolDisplay,ac.AccessCreditDisplay,gen.GenderEconDisplay
-from dbo.v_dc_lmic l
+from (
+select CountryCode, GNICapYear, GNICap, GNIIncCatOverride, GNILimitIncCat 
+from dbo.t_GNICap1, dbo.t_GNILimits
+where GNILimitIncCat='LMIC'
+   and
+   (GNIcap<=GNILimitHigh and GNIcap>=GNILimitLow or GNIIncCatOverride=GNILimitIncCat)
+   and GNICapYear=GNILimitYear
+) l
 left outer join
 	(select * from dbo.t_PolRig pr, dbo.t_Indicators y where y.IndicatorCode='PolRig' and pr.PolRigYear=y.MaxDispYear) pr
 on l.CountryCode=pr.PolRigCountryCode
@@ -78,39 +76,6 @@ left outer join
 	(select * from dbo.t_GenderEcon gen, dbo.t_Indicators y where y.IndicatorCode='GE' and gen.GenderEconYear=y.MaxDispYear) gen
 on l.CountryCode=gen.GenderEconCountryCode
 		
-	
-GO
-
-
-USE [DPESel_Prod13]
-GO
-
-/****** Object:  View [dbo].[v_dc_lmic]    Script Date: 04/23/2013 15:44:57 ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
-
-create view [dbo].[v_dc_lmic] as	
-select CountryCode, GNICapYear, GNICap, GNIIncCatOverride, GNILimitIncCat 
-from dbo.t_GNICap1, dbo.t_GNILimits
-where GNILimitIncCat='LMIC'
-	and
-	(GNIcap<=GNILimitHigh and GNIcap>=GNILimitLow or GNIIncCatOverride=GNILimitIncCat)
-	and GNICapYear=GNILimitYear
-GO
-
-
-USE [DPESel_Prod13]
-GO
-
-/****** Object:  View [dbo].[v_dc_lic_indicators]    Script Date: 04/23/2013 15:44:32 ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
 
 create view [dbo].[v_dc_lic_indicators]
 as
@@ -118,7 +83,14 @@ select l.CountryCode,
 	pr.PolRigDisplay, cl.CivLibDisplay, cc.ConCorDisplay, ge.GovtEffDisplay, rl.RuleLawDisplay, fi.FreedomInfoDisplay,
 	i.ImmunDisplay,h.HealthDisplay,ee.EducExpDisplay,gp.GirlsPrimAgg,ch.CHDisplay,nrm.NRMDisplay,
 	rq.RegQualityDisplay,lra.LRADisplay, bsu.BusStartupDisplay ,tp.TradeDisplay,infl.InflDisplay,fp.FisPolDisplay,ac.AccessCreditDisplay,gen.GenderEconDisplay
-from dbo.v_dc_lic l
+from (
+      select CountryCode, GNICapYear, GNICap, GNIIncCatOverride, GNILimitIncCat 
+   from dbo.t_GNICap1, dbo.t_GNILimits
+   where GNILimitIncCat='LIC'
+      and
+      (GNIcap<=GNILimitHigh and GNIcap>=GNILimitLow or GNIIncCatOverride=GNILimitIncCat)
+      and GNICapYear=GNILimitYear
+   ) l
 left outer join
 	(select * from dbo.t_PolRig pr, dbo.t_Indicators y where y.IndicatorCode='PolRig' and pr.PolRigYear=y.MaxDispYear) pr
 on l.CountryCode=pr.PolRigCountryCode
@@ -183,18 +155,6 @@ left outer join
 on l.CountryCode=gen.GenderEconCountryCode
 		
 	
-GO
-
-
-USE [DPESel_Prod13]
-GO
-
-/****** Object:  View [dbo].[v_dc_lic]    Script Date: 04/23/2013 15:44:22 ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
 
 create view [dbo].[v_dc_lic] as
 select CountryCode, GNICapYear, GNICap, GNIIncCatOverride, GNILimitIncCat 
