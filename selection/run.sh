@@ -1,2 +1,3 @@
+export TDSVER=7.0
 python sql.py > query.sql
-python extract.py > output/selection_timeseries_fy13.csv 
+python all.py

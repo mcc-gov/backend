@@ -1,0 +1,1 @@
+set TDSVER=7.0
