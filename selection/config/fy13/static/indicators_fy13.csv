@@ -1,0 +1,78 @@
+Indicator,Category,Description,Source
+Civil Liberties,Ruling Justly,"Independent experts rate countries on: freedom of expression; association and organizational
+rights; rule of law and human rights; and personal autonomy and economic rights, among
+other things.",Freedom House
+Political Rights,Ruling Justly,"Independent experts rate countries on: the prevalence of free and fair elections
+of officials with real power; the ability of citizens to form political parties that may compete fairly in
+elections; freedom from domination by the military, foreign powers, totalitarian parties, religious
+hierarchies and economic oligarchies; and the political rights of minority groups, among other things.",Freedom House
+Government Effectiveness,Ruling Justly,"An index of surveys and expert assessments that rate countries on: the
+quality of public service provision; civil servants’ competency and independence from political pressures;
+and the government’s ability to plan and implement sound policies, among other things.",World Bank/Brookings Institution’s Worldwide Governance Indicators
+Rule of Law,Ruling Justly,"An index of surveys and expert assessments that rate countries on: the extent to which
+the public has confidence in and abides by the rules of society; the incidence and impact of violent and
+nonviolent crime; the effectiveness, independence, and predictability of the judiciary; the protection of
+property rights; and the enforceability of contracts, among other things.","World Bank/Brookings
+Institution’s Worldwide Governance Indicators"
+Control of Corruption,Ruling Justly,"An index of surveys and expert assessments that rate countries on: “grand
+corruption” in the political arena; the frequency of petty corruption; the effects of corruption on the
+business environment; and the tendency of elites to engage in “state capture,” among other things.",World Bank/Brookings Institution’s Worldwide Governance Indicators
+Voice and Accountability (status quo scorecard only),Ruling Justly,"An index of surveys and expert assessments
+that rate countries on: the ability of institutions to protect civil liberties; the extent to which citizens of
+a country are able to participate in the selection of governments; and the independence of the media,
+among other things.",World Bank/Brookings Institution’s Worldwide Governance Indicators
+Freedom of Information (revised scorecard only),Ruling Justly,"Measures the legal and practical steps taken by
+a government to enable or allow information to move freely through society; this includes measures
+of press freedom, national freedom of information laws, and the extent to which a county is filtering
+internet content or tools.",Freedom House / FRINGE Special/ Open Net Initiative
+Public Expenditure on Health,Investing in People,"Total expenditures on health by government at all levels divided by
+gross domestic product (GDP).",The World Health Organization (WHO)
+Immunization Rates,Investing in People,"The average of DPT3 and measles immunization coverage rates for the most
+recent year available.",WHO and the United Nations Children’s Fund (UNICEF)
+Public Expenditure on Primary Education,Investing in People,"Total expenditures on primary education by government
+at all levels divided by GDP.","The United Nations Educational, Scientific and Cultural
+Organization (UNESCO) Institute of Statistics and National Governments"
+Girls’ Primary Completion Rate,Investing in People,"The number of female students enrolled in the last grade of primary
+education minus repeaters divided by the population in the relevant age cohort (gross intake ratio in
+the last grade of primary).",UNESCO Institute of Statistics
+Natural Resource Management (status quo scorecard only),Investing in People,"An index made up of four indicators:
+eco-region protection, access to improved water, access to improved sanitation, and child (ages 1-4)
+mortality.","The Center for International Earth Science Information Network and the Yale Center
+for Environmental Law and Policy"
+Girls’ Secondary Education (revised scorecard only),Investing in People,"The number of female pupils enrolled in
+lower secondary school, regardless of age, expressed as a percentage of the population of females in
+the theoretical age group for lower secondary education. Lower middle income counties (LMICs)
+will be assessed on this indicator instead of Girls Primary Completion Rates.","United Nations
+Educational, Scientific and Cultural Organization"
+Natural Resource Protection (revised scorecard only),Investing in People,"Assesses whether countries are protecting
+up to 10 percent of all their biomes (e.g., deserts, tropical rainforests, grasslands, savannas and tundra).","The Center for International Earth Science Information Network and the Yale Center for
+Environmental Law and Policy"
+Child Health (revised scorecard only),Investing in People,"An index made up of three indicators: access to improved water,
+access to improved sanitation, and child (ages 1-4) mortality.","The Center for International
+Earth Science Information Network and the Yale Center for Environmental Law and Policy"
+Inflation,Encouraging Economic Freedom,The most recent average annual change in consumer prices.,"The International
+Monetary Fund’s (IMF) World Economic Outlook Database"
+Fiscal Policy,Encouraging Economic Freedom,"General government net lending/borrowing as a percent of GDP, averaged over a threeyear
+period. Net lending/borrowing is calculated as revenue minus total expenditure.","The IMF’s
+World Economic Outlook Database"
+Business Start-Up,Encouraging Economic Freedom,"An index that rates countries on the time and cost of complying with all procedures
+officially required for an entrepreneur to start up and formally operate an industrial or commercial
+business.",International Finance Corporation
+Trade Policy,Encouraging Economic Freedom,"A measure of a country’s openness to international trade based on weighted average
+tariff rates and non-tariff barriers to trade.","The Heritage Foundation’s Index of Economic
+Freedom"
+Regulatory Quality,Encouraging Economic Freedom,"An index of surveys and expert assessments that rate countries on: the burden of
+regulations on business; price controls; the government’s role in the economy; and foreign investment
+regulation, among other areas.","World Bank/Brookings Institution’s Worldwide Governance
+Indicators"
+Land Rights and Access,Encouraging Economic Freedom,"An index that rates countries on the extent to which the institutional, legal,
+and market framework provide secure land tenure and equitable access to land in rural areas and the
+time and cost of property registration in urban and peri-urban areas.","International Fund for
+Agricultural Development and International Finance Corporation"
+Access to Credit (revised scorecard only),Encouraging Economic Freedom,"An index that rates countries on rules and practices
+affecting the coverage, scope and accessibility of credit information available through either a public
+credit registry or a private credit bureau; as well as legal rights in collateral laws and bankruptcy laws.",International Finance Corporation
+Gender in the Economy (revised scorecard only),Encouraging Economic Freedom,"An index that measures the extent to which laws
+provide men and women equal capacity to generate income or participate in the economy, including
+the capacity to access institutions, get a job, register a business, sign a contract, open a bank account,
+choose where to live, and travel freely.",International Finance Corporation
