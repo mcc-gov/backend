@@ -19,8 +19,3 @@
 1 t_RegQuality regulatory_quality RegQuality Data
 1 t_RuleLaw rule_of_law RuleLaw Data
 1 t_TradePolicy trade_policy Trade Data
-0 t_DisplayData selection_indicators
-1 t_GNILimits gni_limits
-0 t_IncomeCategory income_categories
-0 t_IndicatorMedians indicators_threshold
-2 t_GNICap1 gni

@@ -13,7 +13,7 @@ def run (settings, fy):
 	order by country, year
 	"""
 
-	f = open("config/"+fy+"/tables.txt")
+	f = open("config/"+fy+"/tables1.txt")
 
 	num = 0
 	sql = ""
