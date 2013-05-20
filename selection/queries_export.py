@@ -8,36 +8,38 @@ def run(settings, fy):
 	cur = conn.cursor()
 	print "DB Connected"
 
-	tables=[]
-	f=open("config/"+fy+"/tables.txt")
+	queries=[]
+	f=open("config/"+fy+"/queries.txt")
 	for line in f:
 		vals=line.strip().split(' ')
 		skip=int(vals[0])
-		table=vals[1]
+		fq=open("config/"+fy+"/"+vals[1])
+		query=fq.read()
+		fq.close()
 		file=vals[2]
-		tables.append({"skip":skip, "table":table,"file":file})
+		queries.append({"skip":skip, "query":query,"file":file})
 	f.close()
 
-	print tables
+	print queries
 
 	if not os.path.exists("output/"+fy): os.makedirs("output/"+fy)
 
-	for table in tables:
-		print table
-		cur.execute('SELECT * FROM dbo.'+table["table"])
+	for query in queries:
+		print query
+		cur.execute(query["query"])
 	
-	        f=open("output/"+fy+"/"+table["file"]+"_"+fy+".csv","w")
+	        f=open("output/"+fy+"/"+query["file"]+"_"+fy+".csv","w")
 
 		row = cur.fetchone()
 		count=0
 		#print cur.description
 		header=""
 		for i, el in enumerate(cur.description):	
-			if i<table["skip"]:
+			if i<query["skip"]:
 				pass
-			elif i==table["skip"]:
+			elif i==query["skip"]:
 				header=el[0]
-			elif i>table["skip"]:
+			elif i>query["skip"]:
 				header=header+", "+el[0]
 			#header=header[2:len(header)-2]
 
@@ -47,14 +49,14 @@ def run(settings, fy):
 			#print row
 			line=""
 			for i, el in enumerate(row):
-				if i<table["skip"]:
+				if i<query["skip"]:
 					pass
-				elif i==table["skip"]:
+				elif i==query["skip"]:
 					if str(el)=="None":
 						line=""
 					else:
 						line=str(el)
-				elif i>table["skip"]:		
+				elif i>query["skip"]:		
 					if str(el)=="None":
 						line=line+", "
 					else:

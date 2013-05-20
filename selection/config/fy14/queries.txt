@@ -1,0 +1,2 @@
+0 lic.sql lic_indicators
+0 lmic.sql lmic_indicators

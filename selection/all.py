@@ -1,4 +1,5 @@
 import tables_export
+import queries_export
 import timeseries_sql
 import timeseries_export
 
@@ -12,6 +13,9 @@ for fy in settings:
 
 	print "Exporting indicator tables from database"
 	tables_export.run(settings[fy], fy)
+
+	print "Exporting custom queries from database"
+	queries_export.run(settings[fy], fy)
 
 	if settings[fy]["regenerate_timeseries_sql"]=="true":
 		print "Regenerating SQL for timeseries"
